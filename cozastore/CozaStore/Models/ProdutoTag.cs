@@ -3,8 +3,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CozaStore.Models;
 
-[Table("ProdutoCategoria")]
-public class ProdutoCategoria
+[Table("ProdutoTag")]
+public class ProdutoTag
 {
     [Key, Column(Order = 1)]
     public int ProdutoId { get; set; }
@@ -13,6 +13,6 @@ public class ProdutoCategoria
 
      [Key, Column(Order = 2)]
     public int CategoriaId { get; set; }
-    [ForeignKey ("CategoriaId")]
-    public Categoria Categoria { get; set; }
+    [ForeignKey ("TagId")]
+    public Tag Tag { get; set; }
 }
