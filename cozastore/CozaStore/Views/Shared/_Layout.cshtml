@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-    <title>CozaStore | @ViewData["Title"]</title>
+    <title>Cozastore | @ViewData["Title"]</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -42,7 +42,7 @@
 <body class="animsition">
 
     <!-- Header -->
-    <header>
+    <header class='@(ViewBag.Title != "Home" ? "header-v4" : "")'>
         <!-- Header desktop -->
         <div class="container-menu-desktop">
             <!-- Topbar -->
@@ -84,21 +84,27 @@
                     <div class="menu-desktop">
                         <ul class="main-menu">
                             <li class='@(ViewBag.Title == "Home" ? "active-menu" : "")'>
-                                <a asp-action="Index">Home</a>
+                                <a href="index.html">Home</a>
                             </li>
                             <li class='@(ViewBag.Title == "Loja" ? "active-menu" : "")'>
                                 <a asp-action="Loja">Sobre Nós</a>
                             </li>
+
                             <li class='label1 @(ViewBag.Title == "Produtos" ? "active-menu" : "")' data-label1="hot">
                                 <a asp-action="Produtos">Produtos</a>
                             </li>
+
                             <li class='@(ViewBag.Title == "Blog" ? "active-menu" : "")'>
                                 <a asp-action="Blog">Blog</a>
                             </li>
+
                             <li class='@(ViewBag.Title == "Contatos" ? "active-menu" : "")'>
-                                <a asp-action="Contatos">Contatosy</a>
+                                <a asp-action="Contatos">Contatos</a>
                             </li>
-                           
+
+                            <li>
+                                <a href="contact.html">Contact</a>
+                            </li>
                         </ul>
                     </div>
 
@@ -189,26 +195,23 @@
             <ul class="main-menu-m">
                 <li>
                     <a asp-action="Index">Home</a>
-                    <ul class="sub-menu-m">
-                        
-                    </ul>
-                    <span class="arrow-main-menu-m">
-                        <i class="fa fa-angle-right" aria-hidden="true"></i>
-                    </span>
                 </li>
+
                 <li>
                     <a asp-action="Loja">Sobre Nós</a>
                 </li>
+
                 <li>
                     <a asp-action="Produtos" class="label1 rs1" data-label1="hot">Features</a>
                 </li>
+
                 <li>
                     <a asp-action="Blog">Blog</a>
                 </li>
+
                 <li>
                     <a asp-action="Contatos">Contatos</a>
                 </li>
-               
             </ul>
         </div>
 
