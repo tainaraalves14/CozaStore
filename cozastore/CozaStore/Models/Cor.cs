@@ -3,7 +3,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CozaStore.Models;
 
-
 [Table("Cor")]
 public class Cor
 {
