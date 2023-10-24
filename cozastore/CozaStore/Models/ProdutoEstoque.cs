@@ -13,33 +13,32 @@ public class ProdutoEstoque
     [Display(Name = "Produto")]
     [Required(ErrorMessage = "Informe o Produto")]
     public int ProdutoId { get; set; }
-    [ForeignKey ("ProdutoId")]
+    [ForeignKey("ProdutoId")]
     public Produto Produto { get; set; }
 
     [Display(Name = "Cor")]
     [Required(ErrorMessage = "Informe a Cor")]
-    public int CategoriaId { get; set; }
-    [ForeignKey ("CorId")]
+    public byte CorId { get; set; }
+    [ForeignKey("CorId")]
     public Cor Cor { get; set; }
 
     [Display(Name = "Tamanho")]
     [Required(ErrorMessage = "Informe o Tamanho")]
-    public int TamanhoId { get; set; }
-    [ForeignKey ("TamanhoId")]
+    public byte TamanhoId { get; set; }
+    [ForeignKey("TamanhoId")]
     public Tamanho Tamanho { get; set; }
 
     [Display(Name = "Preço")]
     [Column(TypeName = "decimal(8,2)")]
-    [Required(ErrorMessage = "Informe o preço de venda")]
+    [Required(ErrorMessage = "Informe o Preço de Venda")]
     public decimal Preco { get; set; }
 
     [Display(Name = "Preço com Desconto")]
     [Column(TypeName = "decimal(8,2)")]
-    [Required(ErrorMessage = "Informe o preço com desconto")]
+    [Required(ErrorMessage = "Informe o Preço com Desconto")]
     public decimal PrecoDesconto { get; set; }
 
     [Display(Name = "Qtde em Estoque")]
     [Required(ErrorMessage = "Informe a Qtde em Estoque")]
     public int QtdeEstoque { get; set; }
-
 }
